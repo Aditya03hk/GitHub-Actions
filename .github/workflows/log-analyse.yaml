@@ -28,10 +28,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r Log_Analyzer_API/requirements.txt
+          python -m pip install -r Log_Analyzer_API/requirements.txt
 
       - name: Run tests
-        run: pytest
+        run: python -m pytest
 
       - name: Run Linter
-        run: flake8
+        run: python -m flake8
